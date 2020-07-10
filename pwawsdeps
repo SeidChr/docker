@@ -9,6 +9,6 @@ RUN apt-get update && apt-get install -y zip && dotnet tool update -g Amazon.Lam
 
 SHELL ["pwsh", "-command"]
 
-RUN Find-Module psake | Install-Module
+RUN Find-Module psake | Install-Module -Confirm
 
 ENTRYPOINT ["pwsh"]
