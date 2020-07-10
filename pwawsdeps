@@ -7,4 +7,8 @@ RUN apt-get update && apt-get install -y zip && dotnet tool update -g Amazon.Lam
     && npm install -g npm \
     && npm install -g aws-cdk
 
+SHELL ["pwsh", "-command"]
+
+RUN Find-Module psake | Install-Module
+
 ENTRYPOINT ["pwsh"]
